@@ -1,0 +1,5 @@
+- include: base.yml
+- include: zsh.yml user={{ user }}
+- include: zsh.yml user=root
+- name: set the admin ssh key as authorized key
+  authorized_key: user=bpetit key="{{ lookup('file', '/home/bpetit/.ssh/id_rsa.pub') }}"
