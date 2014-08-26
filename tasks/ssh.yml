@@ -1,0 +1,6 @@
+- name: set the admin ssh key as authorized key
+  authorized_key: user={{ user }} key="{{ lookup('file', '/home/bpetit/.ssh/id_rsa.pub') }}"
+- name: set new sshd_config file
+  template: src=sshd_config dest=/etc/ssh/sshd_config
+- name: reload ssh service
+  service: name=ssh state=reloaded
