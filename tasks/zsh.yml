@@ -1,6 +1,0 @@
-- name: install zsh
-  apt: name=zsh state=present
-- name: set zshrc file for the whole system
-  template: src=zshrc dest=/etc/zsh/zshrc
-- name: set zsh as the default shell for {{ user }}
-  raw: chsh -s /bin/zsh {{ user }}

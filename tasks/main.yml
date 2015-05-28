@@ -1,4 +1,3 @@
 - include: base.yml
-- include: zsh.yml user={{ user }}
-- include: zsh.yml user=root
 - include: ssh.yml user={{ user }}
+- include: bash.yml
