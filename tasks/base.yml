@@ -12,5 +12,7 @@
   apt: name=nload state=present
 - name: install tcpdump
   apt: name=tcpdump state=present
+- name: install lsb-release
+  apt: name=lsb-release state=present
 - name: change motd
   template: src=motd dest=/etc/motd
