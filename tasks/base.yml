@@ -1,5 +1,5 @@
 - name: install htop
-  apt: name=htop state=present
+  apt: name=htop state=present update_cache=yes
 - name: install vim
   apt: name=vim state=present
 - name: install mtr
