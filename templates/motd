@@ -2,7 +2,7 @@ Last ansible shot: {{ ansible_date_time.day }}/{{ ansible_date_time.month }}/{{ 
 Host: {{ ansible_hostname }} {{ ansible_fqdn }}
 IPv4: {% for ip in ansible_all_ipv4_addresses %}{{ ip }} {% endfor %}
 IPv6: {% for ip in ansible_all_ipv6_addresses %}{{ ip }} {% endfor %}
-LSB: {{ ansible_lsb.description }}
+Distro: {{ ansible_distribution }} {{ ansible_distribution_release }} {{ ansible_distribution_version }}
 Architecture: {{ ansible_processor_count }} x {{ ansible_processor_cores }} (Cores) x {{ ansible_processor }} {{ ansible_machine }}
 Kernel: {{ ansible_kernel }}
 
