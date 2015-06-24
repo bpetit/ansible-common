@@ -1,5 +1,5 @@
 - name: set new bashrc for root
   template: src=bashrc dest=/root/.bashrc
-- name: set new bashrc for {{ user }}
+- name: set new bashrc for ansible user
   template: src=bashrc dest=/home/{{ user }}/.bashrc
-  when: user != ""
+  when: user is defined

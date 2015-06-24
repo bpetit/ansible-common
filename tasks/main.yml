@@ -1,4 +1,4 @@
 - include: base.yml
-- include: ssh.yml user={{ user }}
+- include: ssh.yml
 - include: bash.yml
 - include: dns.yml
