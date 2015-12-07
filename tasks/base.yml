@@ -1,16 +1,13 @@
-- name: install htop
-  apt: name=htop state=present update_cache=yes
-- name: install vim
-  apt: name=vim state=present
-- name: install mtr
-  apt: name=mtr-tiny state=present
-- name:  install curl
-  apt: name=curl state=present
-- name: install wget
-  apt: name=wget state=present
-- name: install nload
-  apt: name=nload state=present
-- name: install tcpdump
-  apt: name=tcpdump state=present
+- name: install util packages
+  apt: name={{ item }} state=present update_cache=yes
+  with_items:
+    - htop
+    - vim
+    - curl
+    - wget
+    - nload
+    - tcpdump
+    - nmap
+
 - name: change motd
   template: src=motd dest=/etc/motd
