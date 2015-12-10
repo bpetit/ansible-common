@@ -160,4 +160,4 @@ else
   user_color=$bldgrn
 fi
 
-export PS1="$user_color\u$txtrst@$txtblu\h$txtrst$txtpur-[$txtcyn\t$txtpur]-bash:[\V]-jobs:\j\n==> $bldblu\w : $txtrst\n"
+export PS1="$user_color\u$txtrst@$txtblu\h$txtrst$txtwht-[$txtcyn\t$txtwht]-bash:[\V]-jobs:\j\n==> $bldblu\w : $txtrst\n"

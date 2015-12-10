@@ -1,5 +1,5 @@
 - name: install util packages
-  apt: name={{ item }} state=present update_cache=yes
+  apt: name={{ item }} state=present
   with_items:
     - htop
     - vim
@@ -7,7 +7,6 @@
     - wget
     - nload
     - tcpdump
-    - nmap
 
 - name: change motd
   template: src=motd dest=/etc/motd

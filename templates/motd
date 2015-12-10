@@ -3,6 +3,6 @@ Host: {{ ansible_hostname }} {{ ansible_fqdn }}
 IPv4: {% for ip in ansible_all_ipv4_addresses %}{{ ip }} {% endfor %}
 IPv6: {% for ip in ansible_all_ipv6_addresses %}{{ ip }} {% endfor %}
 Distro: {{ ansible_distribution }} {{ ansible_distribution_release }} {{ ansible_distribution_version }}
-Architecture: {{ ansible_processor_count }} x {{ ansible_processor_cores }} (Cores) x {{ ansible_processor }} {{ ansible_machine }}
+Architecture: {{ ansible_processor_count }} x {{ ansible_processor_cores }}
 Kernel: {{ ansible_kernel }}
 
